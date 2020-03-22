@@ -1,0 +1,109 @@
+$xs: "only screen and (max-width : 576px)";
+$sm: "only screen and (max-width : 768px)";
+$md: "only screen and (max-width : 992px)";
+$background: rgb(44, 44, 44);
+
+@mixin box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+
+    label {
+        margin-bottom: 2px;
+        color: #ffffff;
+
+        @media #{$xs} {
+            margin-bottom: 0;
+            padding: 2px;
+        }
+    }
+
+    input {
+        background: rgba(250, 250, 250, 0.9);
+        border: none;
+        padding: 3px;
+
+        @media #{$xs} {
+            padding: 2px;
+        }
+    }
+}
+
+@mixin input {
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(250, 250, 250, 0.4);
+    border-radius: 2px;
+    padding: 3px;
+
+    &:hover {
+        color: black;
+        background: rgba(250, 250, 250, 1);
+        border: 1px solid black;
+        transition: 0.4s;
+    }
+
+    @media #{$xs} {
+        padding: 5px;
+    }
+}
+
+body {
+    overflow: hidden;
+    background-color: $background;
+
+    .container-fluid {
+        width: 100vw;
+        height: 100vh;
+        
+
+        .loginForm {
+            height: 80%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 2px;
+
+                .logo {
+                    height: 30%;
+                    margin-top: 10%;
+                    margin-bottom: 10%;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 80%;
+                        height: 100%;
+                    }
+                }
+
+                form {
+                    height: 55%;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+
+                    .emailBox, .passwordBox {
+                        @include box;
+                    }
+
+                    #submit {
+                        @include input;
+                    }
+                }
+                
+                #registerButton {
+                    width: 80%;
+                    margin-bottom: 5%;
+                    @include input;
+                }
+
+                @media #{$xs} {
+                    height: 100%;
+                }
+        }
+    }
+}
