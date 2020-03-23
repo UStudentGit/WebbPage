@@ -1,7 +1,7 @@
 <?php
 require_once CORE.'Controller.php';
 
-class homeController extends Controller
+class loginController extends Controller
 {
     public function index($id='', $name='')
     {

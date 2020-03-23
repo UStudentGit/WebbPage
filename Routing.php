@@ -1,9 +1,8 @@
 <?php
-require_once CONTROLLER.'homeController.php';
-require_once CONTROLLER.'fileController.php';
+require_once CONTROLLER.'loginController.php';
 class Router
 {
-    protected $controller = 'homeController';
+    protected $controller = 'loginController';
     protected $action = 'index';
     protected $parameters = [];
 
@@ -24,7 +23,7 @@ class Router
         if(!empty($request))
         {
             $url = explode('/',$request);
-            $this->controller = isset($url[0]) ? $url[0].'Controller' : 'homeController';
+            $this->controller = isset($url[0]) ? $url[0].'Controllers' : 'loginController';
             $this->action = isset($url[1]) ? $url[1] : 'index';
             unset($url[0], $url[1]);
             $this->parameters = !empty($url) ? array_values($url) : [];
