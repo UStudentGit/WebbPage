@@ -1,5 +1,6 @@
 <?php
 require_once CONTROLLER.'loginController.php';
+require_once CONTROLLER.'homeController.php';
 class Router
 {
     protected $controller = 'loginController';
