@@ -9,37 +9,39 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- css style -->
-    <link rel="stylesheet" type="text/css" href=".\\Public\\css\\homeStyle.css"/>
-    <link rel="stylesheet" type="text/css" href=".\\Public\\css\\headerStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="../Public/css/homeStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="../Public/css/headerStyle.css"/>
     <!-- font awsome-->
     <script src="https://kit.fontawesome.com/fbbf500712.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="../Public/image/logo.png" alt="LOGO"/>
-            <h1>Cześć,Example</h1>
-        </div>
-        <div class="account">
-            <button class="account-image"><img src="../Public/image/account.svg" alt="account"/></button>
-            <div class="account-content">
-                <button>Settings</button>
-                <button>Logout</button>
-            </div>
+<div class="header">
+    <div class="logo">
+        <a href="home.html">
+        <img src="../Public/image/logo.png" alt="LOGO"/>
+        </a>
+        <h1>Cześć,Example</h1>
+    </div>
+    <div class="account">
+        <button class="account-image"><img src="../Public/image/account.svg" alt="account"/></button>
+        <div class="account-content">
+            <button>Settings</button>
+            <a href="login.html">Logout</a>
         </div>
     </div>
+</div>
     <div class="content">
         <div class="menu-selection">
-            <div class="drop-down-selection">
+            <div class="dropdown">
                     <h1>Working?</h1>
             </div>
             <div class="menu-btn">
                 <button class="btn-event">
-                    <img src="..Public/image/plus.svg" alt="+"/>
+                    <img src="../Public/image/plus.svg" alt="+"/>
                     Nowe wydarzenie
                 </button>
                 <button class="btn-event">
-                    <img src="..Public/image/join.svg" alt="+"/>
+                    <img src="../Public/image/join.svg" alt="+"/>
                     Dołącz do wydarzenia
                 </button>
             </div>

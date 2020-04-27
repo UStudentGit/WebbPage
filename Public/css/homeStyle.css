@@ -12,7 +12,6 @@ body{
 .content{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     background:transparent linear-gradient(#E8E8E8,#ABABAB);
     height: 100%;
 }
